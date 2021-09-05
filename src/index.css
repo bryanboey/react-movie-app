@@ -1,13 +1,61 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+::-webkit-scrollbar {
+  width: 10px;
+  height: 5px;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+::-webkit-scrollbar-track {
+  background: #141414; 
 }
+
+::-webkit-scrollbar-thumb {
+  background: rgb(58, 58, 58); 
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
+body {
+	background: #141414;
+	color: #ffffff;
+}
+
+.movie-app > .row {
+	overflow-x: auto;
+	flex-wrap: nowrap;
+}
+
+/* .query-result {
+  display: flex;
+  flex-wrap: wrap;
+} */
+
+.movies-container {
+	position: relative;
+	transition: transform 0.2s;
+}
+
+.movie-card img {
+  max-width: 180px;
+  height: auto;
+}
+
+.card {
+  border: none;
+  background: aliceblue;
+}
+
+.card:hover > .card-body {
+  background-color: rgb(54, 54, 54);
+}
+
+.home-card:hover {
+  transform: scale(1.1);
+}
+
+.home-card .card-body {
+  display: none;
+}
+
+/* .home-card:hover > .card-body {
+  display: block;
+} */
