@@ -3,9 +3,9 @@ import useFetch from './hooks/useFetch'
 import { Link } from 'react-router-dom'
 import { useGlobalContext } from '../context/GlobalState';
 
-export default function SearchForm(props) {
+export default function SearchForm() {
     const [query, setQuery] = useState("");
-    const { addToWatchList } = useGlobalContext();
+    const { addToWatchList, addToCompletedList } = useGlobalContext();
 
     const handleChange = (e) => {
         setQuery(e.target.value)
@@ -56,8 +56,17 @@ export default function SearchForm(props) {
                                         alt=""
                                     />}
                                 </Link>
-                                <button className="btn btn-sm overlay-btn btn-dark" onClick={() => addToWatchList(movie)}>
+                                <button 
+                                    className="btn btn-sm overlay-btn btn-dark" 
+                                    onClick={() => addToWatchList(movie)}
+                                >
                                     <i className="fas fa-plus"></i>
+                                </button>
+                                <button 
+                                    className="btn btn-sm check-btn overlay-btn btn-dark" 
+                                    onClick={() => addToCompletedList(movie)}
+                                >
+                                    <i className="fas fa-check"></i>
                                 </button>
                                 <div className="card-body">
                                     <p className="">{movie.title}</p>

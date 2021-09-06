@@ -19,7 +19,7 @@ export default function MovieReducer(state, action) {
             }
             return {
                 ...state,
-                completedList: [...state.completedList, action.payload]
+                completedList: [action.payload,...state.completedList]
             }
         case "MOVE_TO_COMPLETEDLIST":
             if (state.completedList.find((movie) => movie.id === action.payload.id)) {
@@ -31,7 +31,7 @@ export default function MovieReducer(state, action) {
             return {
                 ...state,
                 watchList: state.watchList.filter((movie) => movie.id !== action.payload.id),
-                completedList: [...state.completedList, action.payload]
+                completedList: [action.payload,...state.completedList]
             }
         case "REMOVE_TO_COMPLETEDLIST": 
             return {

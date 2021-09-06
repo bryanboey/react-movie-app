@@ -2,11 +2,12 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import { useGlobalContext } from '../context/GlobalState'
 
-export default function WatchList({ movies }) {
+export default function WatchList() {
     const { 
         state, 
         removeFromWatchList,
-        moveToCompletedList } = useGlobalContext();
+        moveToCompletedList 
+    } = useGlobalContext();
 
     const posterUrl = "https://image.tmdb.org/t/p/w500"
     return (

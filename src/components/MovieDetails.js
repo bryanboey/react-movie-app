@@ -2,7 +2,7 @@ import React from 'react'
 import { Link, useParams } from 'react-router-dom'
 import useFetch from './hooks/useFetch';
 
-export default function MovieDetails(props) {
+export default function MovieDetails() {
     const { id } = useParams();
 
     const apiKey = "12539c194bffc611e17fac19ada9b424";
