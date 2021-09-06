@@ -43,7 +43,9 @@ body {
   border: none;
   position: relative;
 }
-
+.btn {
+  width: 35px;
+}
 .overlay-btn {
   position: absolute;
   left: 10px;
@@ -66,7 +68,7 @@ body {
   color: #ff0000;
 }
 .check-btn {
-  left: 40px;
+  left: 45px;
 }
 .watchlist-card:hover > .check-btn {
   display: block;

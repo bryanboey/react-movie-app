@@ -1,13 +1,9 @@
 import React from 'react'
 import useFetch from './hooks/useFetch'
-// import { Link } from 'react-router-dom'
-// import { useGlobalContext } from '../context/GlobalState';
 import MovieCard from './MovieCard';
 
 export default function MovieList({ url }) {
-    // const { addToWatchList, addToCompletedList } = useGlobalContext();
     const { data, loading, error } = useFetch(url)
-    // const posterUrl = "https://image.tmdb.org/t/p/w500";
 
     return (
         <div className="movies-container d-flex justify-content-start m3 pb-5">

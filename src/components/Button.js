@@ -24,13 +24,13 @@ export default function Button({ movie }) {
 						className="btn btn-sm remove-btn overlay-btn btn-dark"
 						onClick={() => removeFromWatchList(movie.id)}
 					>
-						<i className="fas fa-minus"></i>
+						<i class="fas fa-eye-slash"></i>
 					</button>
 					<button
 						className="btn btn-sm check-btn overlay-btn btn-dark"
 						onClick={() => moveToCompletedList(movie)}
 					>
-						<i className="fas fa-check"></i>
+						<i class="fas fa-check-circle"></i>
 					</button>
 				</>
 			) : completedListMovie ? (
@@ -39,7 +39,7 @@ export default function Button({ movie }) {
 						className="btn btn-sm remove-btn overlay-btn btn-dark"
 						onClick={() => removeFromCompletedList(movie.id)}
 					>
-						<i className="fas fa-minus"></i>
+						<i class="fas fa-minus-circle"></i>
 					</button>
 				</>
 			) : (
@@ -48,13 +48,13 @@ export default function Button({ movie }) {
                         className="btn btn-sm overlay-btn btn-dark" 
                         onClick={() => addToWatchList(movie)}
                     >
-                        <i className="fas fa-plus"></i>
+                        <i class="fas fa-eye"></i>
                     </button>
 					<button
 						className="btn btn-sm check-btn overlay-btn btn-dark"
 						onClick={() => addToCompletedList(movie)}
 					>
-						<i className="fas fa-check"></i>
+						<i class="fas fa-check-circle"></i>
 					</button>
 				</>
 			)}

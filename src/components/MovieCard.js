@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from 'react-router-dom'
+import { Link } from "react-router-dom";
 import Button from "./Button";
 
 export default function MovieCard({ movie }) {
@@ -22,7 +22,7 @@ export default function MovieCard({ movie }) {
 					/>
 				)}
 			</Link>
-			<Button movie={movie}/>
+			<Button movie={movie} />
 			<div className="card-body">
 				<p>{movie.title}</p>
 			</div>
