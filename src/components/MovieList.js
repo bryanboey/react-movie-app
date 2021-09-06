@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 import { useGlobalContext } from '../context/GlobalState';
 
 export default function MovieList({ url }) {
-    const { addToWatchList } = useGlobalContext();
+    const { addToWatchList, addToCompletedList } = useGlobalContext();
     const { data, loading, error } = useFetch(url)
     const posterUrl = "https://image.tmdb.org/t/p/w500";
 
@@ -30,8 +30,17 @@ export default function MovieList({ url }) {
                                 alt=""
                             />}
                         </Link>
-                        <button className="btn btn-sm overlay-btn btn-dark" onClick={() => addToWatchList(movie)}>
+                        <button 
+                            className="btn btn-sm overlay-btn btn-dark" 
+                            onClick={() => addToWatchList(movie)}
+                        >
                             <i className="fas fa-plus"></i>
+                        </button>
+                        <button 
+                            className="btn btn-sm check-btn overlay-btn btn-dark" 
+                            onClick={() => addToCompletedList(movie)}
+                        >
+                            <i className="fas fa-check"></i>
                         </button>
                         <div className="card-body">
                             <p>{movie.title}</p>

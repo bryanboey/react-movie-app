@@ -35,13 +35,13 @@ export default function WatchList({ movies }) {
                                         className="btn btn-sm remove-btn overlay-btn btn-dark" 
                                         onClick={() => removeFromWatchList(movie.id)}
                                     >
-                                        <i class="fas fa-minus"></i>
+                                        <i className="fas fa-minus"></i>
                                     </button>
                                     <button 
                                         className="btn btn-sm check-btn overlay-btn btn-dark" 
                                         onClick={() => moveToCompletedList(movie)}
                                     >
-                                        <i class="fas fa-check"></i>
+                                        <i className="fas fa-check"></i>
                                     </button>
                                 
                                     <div className="card-body">

@@ -1,9 +1,12 @@
 export default function MovieReducer(state, action) {
     switch (action.type) {
         case "ADD_TO_WATCHLIST":
+            if (state.watchList.find((movie) => movie.id === action.payload.id)) {
+                return state
+            }
             return {
                 ...state,
-                watchList: [...state.watchList, action.payload]
+                watchList: [action.payload, ...state.watchList,]
             }
         case "REMOVE_FROM_WATCHLIST":
             return {
@@ -11,11 +14,20 @@ export default function MovieReducer(state, action) {
                 watchList: state.watchList.filter((movie) => movie.id !== action.payload)
             }
         case "ADD_TO_COMPLETEDLIST":
+            if (state.completedList.find((movie) => movie.id === action.payload.id)) {
+                return state
+            }
             return {
                 ...state,
                 completedList: [...state.completedList, action.payload]
             }
         case "MOVE_TO_COMPLETEDLIST":
+            if (state.completedList.find((movie) => movie.id === action.payload.id)) {
+                return {
+                    ...state,
+                    watchList: state.watchList.filter((movie) => movie.id !== action.payload.id),
+                }
+            }
             return {
                 ...state,
                 watchList: state.watchList.filter((movie) => movie.id !== action.payload.id),
