@@ -1,8 +1,10 @@
 import React from 'react'
 import useFetch from './hooks/useFetch'
 import { Link } from 'react-router-dom'
+import { useGlobalContext } from '../context/GlobalState';
 
 export default function MovieList({ url }) {
+    const { addToWatchList } = useGlobalContext();
     const { data, loading, error } = useFetch(url)
     const posterUrl = "https://image.tmdb.org/t/p/w500";
 
@@ -14,7 +16,7 @@ export default function MovieList({ url }) {
                         </div> }
             { data && data.results.map((movie) => {
                 return (
-                    <div className="card home-card m-2 bg-transparent border-transparent" style={{ width: "25%", minWidth: "200px" }}>
+                    <div key={movie.id} className="card home-card m-2 bg-transparent border-transparent" style={{ width: "25%", minWidth: "200px" }}>
                         <Link to={`/movies/${movie.id}`}>
                             {movie.poster_path 
                             ? <img
@@ -28,6 +30,9 @@ export default function MovieList({ url }) {
                                 alt=""
                             />}
                         </Link>
+                        <button className="btn btn-sm overlay-btn btn-dark" onClick={() => addToWatchList(movie)}>
+                            <i className="fas fa-plus"></i>
+                        </button>
                         <div className="card-body">
                             <p>{movie.title}</p>
                         </div>

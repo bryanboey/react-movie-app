@@ -41,7 +41,40 @@ body {
 
 .card {
   border: none;
-  background: aliceblue;
+  position: relative;
+}
+
+.overlay-btn {
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  opacity: 0.8;
+  display: none;
+}
+.result-card:hover > .overlay-btn {
+  display: block;
+  color: #00ff22;
+}
+.home-card:hover > .overlay-btn {
+  display: block;
+  color: #00ff22;
+}
+.watchlist-card:hover > .remove-btn {
+  display: block;
+  color: #ff0000;
+}
+.check-btn {
+  left: 40px;
+}
+.watchlist-card:hover > .check-btn {
+  display: block;
+  color: #00ff22;
+}
+.completedlist-card:hover > .remove-btn {
+  display: block;
+  color: #ff0000;
 }
 
 .card:hover > .card-body {
