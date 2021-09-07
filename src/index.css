@@ -55,15 +55,25 @@ body {
   transition: opacity 0.3s;
   -webkit-transition: opacity 0.3s;
 }
-.result-card:hover > .overlay-btn {
-  opacity: 0.8;
-}
+
 .card:hover > .overlay-btn {
   opacity: 0.8;
 }
 
 .check-circle-btn {
   left: 45px;
+}
+.eye-btn:hover {
+  color: rgb(0, 255, 0);
+}
+.eye-slash-btn:hover{
+  color: rgb(255 ,0 ,0);
+}
+.check-circle-btn:hover {
+  color: rgb(0, 255, 0);
+}
+.minus-circle-btn:hover {
+  color: rgb(255, 0, 0);
 }
 
 .card:hover > .card-body {

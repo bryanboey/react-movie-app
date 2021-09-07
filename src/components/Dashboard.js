@@ -2,7 +2,7 @@ import React from "react";
 import MovieList from "./MovieList";
 
 export default function Dashboard() {
-	const apiKey = "12539c194bffc611e17fac19ada9b424";
+	const apiKey = process.env.REACT_APP_TMDB_API_KEY;
 	const trendingUrl = `https://api.themoviedb.org/3/trending/movie/day?api_key=${apiKey}`;
 	const popularUrl = `https://api.themoviedb.org/3/movie/popular?api_key=${apiKey}&language=en-US&page=1`;
 	const upcomingUrl = `https://api.themoviedb.org/3/movie/upcoming?api_key=${apiKey}&language=en-US&page=1`

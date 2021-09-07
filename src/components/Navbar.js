@@ -10,7 +10,7 @@ export default function Navbar() {
 					id="navbarSupportedContent"
 				>
 					<Link to="/" className="navbar-brand brand-logo">
-						Movie App
+						PopcornDB
 					</Link>
 					<ul className="navbar-nav mr-auto">
 						<li className="nav-item">

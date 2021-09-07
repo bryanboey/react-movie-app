@@ -5,7 +5,7 @@ import useFetch from "./hooks/useFetch";
 export default function MovieDetails() {
 	const { id } = useParams();
 
-	const apiKey = "12539c194bffc611e17fac19ada9b424";
+	const apiKey = process.env.REACT_APP_TMDB_API_KEY;
 	const movieDetailsUrl = `https://api.themoviedb.org/3/movie/${id}?api_key=${apiKey}`;
 
 	const { data, loading, error } = useFetch(movieDetailsUrl);

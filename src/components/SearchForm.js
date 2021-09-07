@@ -8,7 +8,7 @@ export default function SearchForm() {
 	const [prevQuery, setPrevQuery] = useState("")
 	const [currentPage, setCurrentPage] = useState(1)
 
-	const apiKey = "12539c194bffc611e17fac19ada9b424";
+	const apiKey = process.env.REACT_APP_TMDB_API_KEY;
 	const url = `https://api.themoviedb.org/3/search/movie?api_key=${apiKey}&query=${prevQuery}&page=${currentPage}`
 
 	const handleChange = (e) => {
