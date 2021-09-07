@@ -21,40 +21,40 @@ export default function Button({ movie }) {
 			{watchListMovie ? (
 				<>
 					<button
-						className="btn btn-sm remove-btn overlay-btn btn-dark"
+						className="btn btn-sm eye-slash-btn overlay-btn btn-dark"
 						onClick={() => removeFromWatchList(movie.id)}
 					>
-						<i class="fas fa-eye-slash"></i>
+						<i className="fas fa-eye-slash"></i>
 					</button>
 					<button
-						className="btn btn-sm check-btn overlay-btn btn-dark"
+						className="btn btn-sm check-circle-btn overlay-btn btn-dark"
 						onClick={() => moveToCompletedList(movie)}
 					>
-						<i class="fas fa-check-circle"></i>
+						<i className="fas fa-check-circle"></i>
 					</button>
 				</>
 			) : completedListMovie ? (
 				<>
 					<button
-						className="btn btn-sm remove-btn overlay-btn btn-dark"
+						className="btn btn-sm minus-circle-btn overlay-btn btn-dark"
 						onClick={() => removeFromCompletedList(movie.id)}
 					>
-						<i class="fas fa-minus-circle"></i>
+						<i className="fas fa-minus-circle"></i>
 					</button>
 				</>
 			) : (
 				<>
                     <button 
-                        className="btn btn-sm overlay-btn btn-dark" 
+                        className="btn btn-sm eye-btn overlay-btn btn-dark" 
                         onClick={() => addToWatchList(movie)}
                     >
-                        <i class="fas fa-eye"></i>
+                        <i className="fas fa-eye"></i>
                     </button>
 					<button
-						className="btn btn-sm check-btn overlay-btn btn-dark"
+						className="btn btn-sm check-circle-btn overlay-btn btn-dark"
 						onClick={() => addToCompletedList(movie)}
 					>
-						<i class="fas fa-check-circle"></i>
+						<i className="fas fa-check-circle"></i>
 					</button>
 				</>
 			)}

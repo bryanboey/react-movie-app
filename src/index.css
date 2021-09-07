@@ -43,46 +43,32 @@ body {
   border: none;
   position: relative;
 }
-.btn {
-  width: 35px;
-}
+
 .overlay-btn {
+  width: 35px;
   position: absolute;
   left: 10px;
   top: 10px;
   margin-left: auto;
   margin-right: auto;
-  opacity: 0.8;
-  display: none;
+  opacity: 0;
+  transition: opacity 0.3s;
+  -webkit-transition: opacity 0.3s;
 }
 .result-card:hover > .overlay-btn {
-  display: block;
-  color: #00ff22;
+  opacity: 0.8;
 }
-.home-card:hover > .overlay-btn {
-  display: block;
-  color: #00ff22;
+.card:hover > .overlay-btn {
+  opacity: 0.8;
 }
-.watchlist-card:hover > .remove-btn {
-  display: block;
-  color: #ff0000;
-}
-.check-btn {
+
+.check-circle-btn {
   left: 45px;
-}
-.watchlist-card:hover > .check-btn {
-  display: block;
-  color: #00ff22;
-}
-.completedlist-card:hover > .remove-btn {
-  display: block;
-  color: #ff0000;
 }
 
 .card:hover > .card-body {
   background-color: rgb(54, 54, 54);
 }
-
 .home-card:hover {
   transform: scale(1.1);
 }
@@ -94,3 +80,16 @@ body {
 /* .home-card:hover > .card-body {
   display: block;
 } */
+.page-link {
+  background-color: rgb(54, 54, 54);
+  color: white;
+  border: none;
+}
+.page-link:hover {
+  color:black;
+}
+
+.page-item.active .page-link {
+  background-color: rgb(180, 180, 180);
+  color:black;
+}

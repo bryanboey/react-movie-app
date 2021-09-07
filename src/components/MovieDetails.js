@@ -36,7 +36,7 @@ export default function MovieDetails() {
 								</h1>
 								<p className="card-text">{data.overview}</p>
 								<p className="card-text">
-									<strong>Runtime:</strong> 
+									<strong>Runtime: </strong> 
                                     {data.runtime}{" "} minutes
 								</p>
 								<p className="card-text">

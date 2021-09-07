@@ -1,9 +1,15 @@
 import React, { useState } from "react";
 import useFetch from "./hooks/useFetch";
 import MovieCard from "./MovieCard";
+import ResultsPagination from "./ResultsPagination";
 
 export default function SearchForm() {
 	const [query, setQuery] = useState("");
+	const [prevQuery, setPrevQuery] = useState("")
+	const [currentPage, setCurrentPage] = useState(1)
+
+	const apiKey = "12539c194bffc611e17fac19ada9b424";
+	const url = `https://api.themoviedb.org/3/search/movie?api_key=${apiKey}&query=${prevQuery}&page=${currentPage}`
 
 	const handleChange = (e) => {
 		setQuery(e.target.value);
@@ -11,11 +17,10 @@ export default function SearchForm() {
 
 	const handleSubmit = (e) => {
 		e.preventDefault();
+		setPrevQuery(query)
+		setCurrentPage(1);
 		setQuery("");
 	};
-
-	const apiKey = "12539c194bffc611e17fac19ada9b424";
-	const url = `https://api.themoviedb.org/3/search/movie?api_key=${apiKey}&query=${query}`;
 
 	const { data, loading } = useFetch(url);
 
@@ -52,6 +57,16 @@ export default function SearchForm() {
 								</div>
 							);
 						})}
+						{ data && 
+							data.total_pages > 1 
+							? ( 
+							<>
+								<ResultsPagination 
+									totalPages={data.total_pages} 
+									currentPage={currentPage} 
+									setCurrentPage={setCurrentPage}/>
+							</>
+							 ) : ( '' ) }
 				</div>
 			</div>
 		</div>

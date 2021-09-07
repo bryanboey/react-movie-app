@@ -5,6 +5,7 @@ export default function Dashboard() {
 	const apiKey = "12539c194bffc611e17fac19ada9b424";
 	const trendingUrl = `https://api.themoviedb.org/3/trending/movie/day?api_key=${apiKey}`;
 	const popularUrl = `https://api.themoviedb.org/3/movie/popular?api_key=${apiKey}&language=en-US&page=1`;
+	const upcomingUrl = `https://api.themoviedb.org/3/movie/upcoming?api_key=${apiKey}&language=en-US&page=1`
 
 	return (
 		<div className="container-fluid movie-app px-5">
@@ -19,6 +20,12 @@ export default function Dashboard() {
 			</div>
 			<div className="row">
 				<MovieList url={popularUrl} />
+			</div>
+			<div className="row d-flex align-items-center mt-4 mb-4">
+				<h5>Upcoming</h5>
+			</div>
+			<div className="row">
+				<MovieList url={upcomingUrl} />
 			</div>
 		</div>
 	);
