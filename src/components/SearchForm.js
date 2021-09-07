@@ -5,11 +5,11 @@ import ResultsPagination from "./ResultsPagination";
 
 export default function SearchForm() {
 	const [query, setQuery] = useState("");
-	const [prevQuery, setPrevQuery] = useState("")
-	const [currentPage, setCurrentPage] = useState(1)
+	const [prevQuery, setPrevQuery] = useState("");
+	const [currentPage, setCurrentPage] = useState(1);
 
 	const apiKey = process.env.REACT_APP_TMDB_API_KEY;
-	const url = `https://api.themoviedb.org/3/search/movie?api_key=${apiKey}&query=${prevQuery}&page=${currentPage}`
+	const url = `https://api.themoviedb.org/3/search/movie?api_key=${apiKey}&query=${prevQuery}&page=${currentPage}`;
 
 	const handleChange = (e) => {
 		setQuery(e.target.value);
@@ -17,7 +17,7 @@ export default function SearchForm() {
 
 	const handleSubmit = (e) => {
 		e.preventDefault();
-		setPrevQuery(query)
+		setPrevQuery(query);
 		setCurrentPage(1);
 		setQuery("");
 	};
@@ -38,8 +38,8 @@ export default function SearchForm() {
 					/>
 				</form>
 			</div>
-			<div className="row">
-				<div className="movies-container d-flex flex-wrap justify-content-center m3">
+			<div className="movies-container d-flex flex-wrap justify-content-center m3">
+				<div className="row">
 					{loading && (
 						<div className="spinner-border" role="status">
 							<span className="visually-hidden">Loading...</span>
@@ -57,17 +57,16 @@ export default function SearchForm() {
 								</div>
 							);
 						})}
-						{ data && 
-							data.total_pages > 1 
-							? ( 
-							<>
-								<ResultsPagination 
-									totalPages={data.total_pages} 
-									currentPage={currentPage} 
-									setCurrentPage={setCurrentPage}/>
-							</>
-							 ) : ( '' ) }
 				</div>
+				{data && data.total_pages > 1 ? (
+					<div className="row m-3">
+						<ResultsPagination
+							totalPages={data.total_pages}
+							currentPage={currentPage}
+							setCurrentPage={setCurrentPage}
+						/>
+					</div>
+				) : ( "" )}
 			</div>
 		</div>
 	);
