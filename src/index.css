@@ -78,6 +78,7 @@ body {
 
 .card:hover > .card-body {
   background-color: rgb(54, 54, 54);
+  border-radius: .25rem;
 }
 .home-card:hover {
   transform: scale(1.1);
