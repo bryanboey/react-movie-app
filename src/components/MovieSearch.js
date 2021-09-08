@@ -39,7 +39,7 @@ export default function MovieSearch() {
 							<div
 								key={movie.id}
 								className="card result-card m-2 my-2 bg-dark"
-								style={{ width: "18%", minWidth: "180px" }}
+								style={{ width: "18%", minWidth: "150px" }}
 							>
 								<MovieCard movie={movie} />
 							</div>
