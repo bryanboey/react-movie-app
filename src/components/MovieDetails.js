@@ -15,7 +15,6 @@ export default function MovieDetails() {
 	const youtubeUrl = "https://www.youtube.com/watch?v=";
 
 	const { data, loading, error } = useFetch(movieDetailsUrl);
-
 	const videoData = useGetVideo(videoUrl);
 
 	return (
@@ -69,11 +68,17 @@ export default function MovieDetails() {
 											id="imdb-image"
 											src="https://raw.githubusercontent.com/bryanboey/react-movie-app/a32ba52186a36b82d94e2b38e685b8375a3f005b/src/lib/images/imdb-logo.svg"
 											alt="imdb"
-											style={{ width: "45px" }}
 										/>
 									</a>
 								) : ( "" )}
-								{videoData ? <a href={`${youtubeUrl}${videoData.key}`}>Youtube</a> : ""}
+								{videoData ? ( 
+								<a href={`${youtubeUrl}${videoData.key}`}>
+									<img
+										id="yt-image"
+										src="https://raw.githubusercontent.com/bryanboey/react-movie-app/master/src/lib/images/YouTube-White-Full-Color-Logo.wine.svg"
+										alt="youtube"
+									/>
+								</a> ) : ("")}
 							</div>
 						</div>
 					</div>

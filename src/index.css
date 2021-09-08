@@ -148,3 +148,12 @@ body {
   visibility: visible;
   opacity: 1 !important;
 }
+
+#imdb-image {
+  height: 25px;
+  margin: 5px;
+}
+#yt-image {
+  height: 85px;
+  margin: 5px;
+}
