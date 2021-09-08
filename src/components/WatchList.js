@@ -6,7 +6,7 @@ export default function WatchList() {
 	const { state } = useGlobalContext();
 
 	return (
-		<div className="container align-items-center justify-content-center m-auto mt-3">
+		<div className="container align-items-center justify-content-center m-auto mt-3 pb-3">
 			{state.watchList.length > 0 ? (
 				<div className="row">
 					<div className="movies-container d-flex flex-wrap justify-content-start m3">

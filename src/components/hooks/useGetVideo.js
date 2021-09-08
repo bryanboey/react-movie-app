@@ -12,7 +12,6 @@ export default function useGetVideo(url) {
             return res.json();
         })
         .then(data => {
-            console.log(data)
             setVideoData(data.results[0]);
         })
         .catch(err => {
@@ -20,6 +19,6 @@ export default function useGetVideo(url) {
         })
 
     },[url]);
-    console.log(videoData)
+    
     return videoData
 }

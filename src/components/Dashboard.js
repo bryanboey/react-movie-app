@@ -8,7 +8,7 @@ export default function Dashboard() {
 	const upcomingUrl = `https://api.themoviedb.org/3/movie/upcoming?api_key=${apiKey}&language=en-US&page=1`
 
 	return (
-		<div className="container-fluid movie-app px-5">
+		<div className="container-fluid movie-app px-5 mb-4">
 			<div className="row d-flex align-items-center my-3">
 				<h5>Trending</h5>
 			</div>

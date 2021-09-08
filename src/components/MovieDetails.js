@@ -18,7 +18,7 @@ export default function MovieDetails() {
 	const videoData = useGetVideo(videoUrl);
 
 	return (
-		<div className="container">
+		<div className="container pb-3">
 			{error && <div>{error}</div>}
 			{loading && (
 				<div className="spinner-border" role="status">
@@ -63,7 +63,7 @@ export default function MovieDetails() {
 										 ) : ( "-" )}
 								</p>
 								{data.imdb_id ? (
-									<a href={`https://www.imdb.com/title/${data.imdb_id}`}>
+									<a href={`https://www.imdb.com/title/${data.imdb_id}`} target="_blank" rel="noreferrer">
 										<img
 											id="imdb-image"
 											src="https://raw.githubusercontent.com/bryanboey/react-movie-app/a32ba52186a36b82d94e2b38e685b8375a3f005b/src/lib/images/imdb-logo.svg"
@@ -72,10 +72,10 @@ export default function MovieDetails() {
 									</a>
 								) : ( "" )}
 								{videoData ? ( 
-								<a href={`${youtubeUrl}${videoData.key}`}>
+								<a href={`${youtubeUrl}${videoData.key}`} target="_blank" rel="noreferrer">
 									<img
 										id="yt-image"
-										src="https://raw.githubusercontent.com/bryanboey/react-movie-app/master/src/lib/images/YouTube-White-Full-Color-Logo.wine.svg"
+										src="https://raw.githubusercontent.com/bryanboey/react-movie-app/master/src/lib/images/youtube-logo.png"
 										alt="youtube"
 									/>
 								</a> ) : ("")}

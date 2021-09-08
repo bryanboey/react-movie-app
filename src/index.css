@@ -150,10 +150,11 @@ body {
 }
 
 #imdb-image {
-  height: 25px;
+  height: 27px;
   margin: 5px;
+  margin-right: 1rem;
 }
 #yt-image {
-  height: 85px;
+  height: 27px;
   margin: 5px;
 }
