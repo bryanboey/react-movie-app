@@ -23,6 +23,7 @@ export default function MovieDetails() {
 				<Link to="/">
 					<button className="btn btn-dark back-btn">
 						Back to Home
+					</button>
 				</Link>
 			</div>
 			{data && (
