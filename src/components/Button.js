@@ -11,10 +11,10 @@ export default function Button({ movie }) {
 		removeFromCompletedList,
 	} = useGlobalContext();
 
-	const watchListMovie = state.watchList.find((el) => el.id === movie.id);
+	const watchListMovie = state.watchList.find(
+		(el) => el.id === movie.id);
 	const completedListMovie = state.completedList.find(
-		(el) => el.id === movie.id
-	);
+		(el) => el.id === movie.id);
 
 	return (
 		<>
