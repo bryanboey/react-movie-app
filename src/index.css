@@ -42,6 +42,25 @@ body {
 .card {
   border: none;
   position: relative;
+  background-color: rgb(50, 50, 50);
+  border-radius: .5rem;
+}
+
+.card-body {
+  border:none;
+}
+.vert-card-body {
+  background-color: rgb(50, 50, 50);
+  border-bottom-left-radius: .5rem;
+  border-bottom-right-radius: .5rem;
+  border: none;
+  transition: background-color 0.5s ease-out;
+}
+
+.card:hover > .vert-card-body {
+  background-color: rgb(110, 110, 110);
+  border-bottom-left-radius: .5rem;
+  border-bottom-right-radius: .5rem;
 }
 
 .overlay-btn {
@@ -76,10 +95,6 @@ body {
   color: rgb(255, 0, 0);
 }
 
-.card:hover > .card-body {
-  background-color: rgb(54, 54, 54);
-  border-radius: .25rem;
-}
 .home-card:hover {
   transform: scale(1.1);
 }
@@ -103,4 +118,18 @@ body {
 .page-item.active .page-link {
   background-color: rgb(180, 180, 180);
   color:black;
+}
+.details-card {
+  max-height: 600px;
+  width: auto;
+}
+
+.back-btn {
+  background-color: rgb(50, 50, 50);
+  color: white;
+  border-radius: 0.5rem;
+  border: none;
+}
+.back-btn:hover {
+  background-color: rgb(110, 110, 110);
 }

@@ -14,7 +14,7 @@ export default function WatchList() {
 							return (
 								<div
 									key={movie.id}
-									className="card watchlist-card m-2 my-2 bg-dark"
+									className="card watchlist-card m-2 my-2"
 									style={{ width: "18%", minWidth: "150px" }}
 								>
 									<MovieCard movie={movie} />

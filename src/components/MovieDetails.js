@@ -19,20 +19,26 @@ export default function MovieDetails() {
 					<span className="visually-hidden">Loading...</span>
 				</div>
 			)}
+			<div className="d-flex align-items-center justify-content-end m-3">
+				<Link to="/">
+					<button className="btn btn-dark back-btn">
+						Back to Home
+				</Link>
+			</div>
 			{data && (
-				<div className="card my-5 text-white bg-dark p-5">
+				<div className="card details-card text-white bg-dark p-3">
 					<div className="row g-0">
-						<div className="col-md-4">
+						<div className="col-sm-3 align-items-start">
 							<img
 								src={`${moviePosterUrl}${data.poster_path}`}
 								className="img-fluid rounded-start"
-								alt="movie poster"
+								alt={data.title}
 							/>
 						</div>
-						<div className="col-md-8">
-							<div className="card-body">
+						<div className="col-sm-9">
+							<div className="card-body detail-card">
 								<h1 className="card-title">
-									{data.original_title}
+									{data.title}
 								</h1>
 								<p className="card-text">{data.overview}</p>
 								<p className="card-text">
@@ -51,11 +57,6 @@ export default function MovieDetails() {
 										  })
 										: "-"}
 								</p>
-							</div>
-							<div className="d-flex align-items-end flex-column align-items-end mt-auto p-2">
-								<Link to="/" className="btn btn-primary ">
-									Back to Home
-								</Link>
 							</div>
 						</div>
 					</div>
