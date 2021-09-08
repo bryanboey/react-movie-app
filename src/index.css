@@ -120,7 +120,6 @@ body {
   color:black;
 }
 .details-card {
-  max-height: 600px;
   width: auto;
 }
 
@@ -132,4 +131,9 @@ body {
 }
 .back-btn:hover {
   background-color: rgb(110, 110, 110);
+}
+
+
+#nav-image {
+  height: 40px;
 }

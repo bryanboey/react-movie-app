@@ -1,6 +1,6 @@
 import React from "react";
 import { Switch, Route } from "react-router-dom";
-import Navbar from "./components/Navbar";
+import Navigation from "./components/Navigation";
 import Dashboard from "./components/Dashboard";
 import MovieDetails from "./components/MovieDetails";
 import MovieSearch from "./components/MovieSearch";
@@ -12,7 +12,7 @@ import GlobalProvider from "./context/GlobalState";
 function App() {
 	return (
 		<GlobalProvider>
-			<Navbar />
+			<Navigation />
 			<Switch>
 				<Route exact path="/" component={Dashboard} />
 				<Route path="/movies/:id" component={MovieDetails} />
