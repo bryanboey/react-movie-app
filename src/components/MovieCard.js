@@ -24,7 +24,12 @@ export default function MovieCard({ movie }) {
 			</Link>
 			<Button movie={movie} />
 			<div className="card-body vert-card-body">
-				<p>{movie.title} ({movie.release_date.substr(0,4)})</p>
+				<p>
+					{movie.title}{" "}
+					{movie.release_date
+						? `(${movie.release_date.substr(0, 4)})`
+						: "(-)"}
+				</p>
 			</div>
 		</>
 	);
