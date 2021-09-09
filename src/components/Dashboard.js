@@ -8,20 +8,20 @@ export default function Dashboard() {
 	const upcomingUrl = `https://api.themoviedb.org/3/movie/upcoming?api_key=${apiKey}&language=en-US&page=1`
 
 	return (
-		<div className="container-fluid movie-app px-5 mb-4">
-			<div className="row d-flex align-items-center mt-3">
-				<h5>Trending</h5>
+		<div className="container-fluid movie-app mb-4">
+			<div className="row d-flex mt-3 ms-2">
+				<h5>Trending Now</h5>
 			</div>
 			<div className="row mx-3">
 				<MovieList url={trendingUrl} />
 			</div>
-			<div className="row d-flex align-items-center mt-3">
-				<h5>Popular Now</h5>
+			<div className="row d-flex mt-3 ms-2">
+				<h5>Most Popular</h5>
 			</div>
 			<div className="row mx-3">
 				<MovieList url={popularUrl} />
 			</div>
-			<div className="row d-flex align-items-center mt-3">
+			<div className="row d-flex mt-3 ms-2">
 				<h5>Upcoming</h5>
 			</div>
 			<div className="row mx-3">

@@ -190,3 +190,15 @@ body {
   background-color: rgb(100, 100, 100);
   color: white;
 }
+
+.movie-app {
+  padding-right: 3rem;
+  padding-left: 3rem;
+}
+
+@media screen and (max-width: 600px) {
+  .movie-app {
+    padding-left: 0.75rem!important;
+    padding-right: 0.75rem!important;
+  }
+}
