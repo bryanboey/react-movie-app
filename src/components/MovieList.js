@@ -6,7 +6,7 @@ export default function MovieList({ url }) {
     const { data, loading, error } = useFetch(url)
 
     return (
-        <div className="movies-container d-flex justify-content-start m3 pb-5">
+        <div className="movies-container d-flex justify-content-start m3 pt-2 pb-4">
             { error && <div>{error}</div> }
             { loading && <div className="spinner-border" role="status">
                             <span className="visually-hidden">Loading...</span>

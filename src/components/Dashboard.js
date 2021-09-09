@@ -9,22 +9,22 @@ export default function Dashboard() {
 
 	return (
 		<div className="container-fluid movie-app px-5 mb-4">
-			<div className="row d-flex align-items-center my-3">
+			<div className="row d-flex align-items-center mt-3">
 				<h5>Trending</h5>
 			</div>
-			<div className="row">
+			<div className="row mx-3">
 				<MovieList url={trendingUrl} />
 			</div>
-			<div className="row d-flex align-items-center my-3">
+			<div className="row d-flex align-items-center mt-3">
 				<h5>Popular Now</h5>
 			</div>
-			<div className="row">
+			<div className="row mx-3">
 				<MovieList url={popularUrl} />
 			</div>
-			<div className="row d-flex align-items-center my-3">
+			<div className="row d-flex align-items-center mt-3">
 				<h5>Upcoming</h5>
 			</div>
-			<div className="row">
+			<div className="row mx-3">
 				<MovieList url={upcomingUrl} />
 			</div>
 		</div>
