@@ -1,17 +1,17 @@
-import React, { useState } from 'react'
+import React, { useState } from "react";
 
 export default function QueryForm({ setQuery }) {
-    const [input, setInput] = useState("")
+    const [input, setInput] = useState("");
 
     const handleChange = (e) => {
         setInput(e.target.value);
-    }
+    };
 
     const handleSubmit = (e) => {
         e.preventDefault();
         setQuery(input);
-        setInput("")
-    }
+        setInput("");
+    };
 
     return (
         <form className="" onSubmit={handleSubmit}>
@@ -24,5 +24,5 @@ export default function QueryForm({ setQuery }) {
                 placeholder="Search for movies"
             />
         </form>
-    )
+    );
 }

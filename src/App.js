@@ -10,18 +10,18 @@ import "./lib/font-awesome/css/all.min.css";
 import GlobalProvider from "./context/GlobalState";
 
 function App() {
-	return (
-		<GlobalProvider>
-			<Navigation />
-			<Switch>
-				<Route exact path="/" component={Dashboard} />
-				<Route path="/movies/:id" component={MovieDetails} />
-				<Route path="/search" component={MovieSearch} />
-				<Route path="/watchlist" component={WatchList} />
-				<Route path="/completedlist" component={CompletedList} />
-			</Switch>
-		</GlobalProvider>
-	);
+    return (
+        <GlobalProvider>
+            <Navigation />
+            <Switch>
+                <Route exact path="/" component={Dashboard} />
+                <Route path="/movies/:id" component={MovieDetails} />
+                <Route path="/search" component={MovieSearch} />
+                <Route path="/watchlist" component={WatchList} />
+                <Route path="/completedlist" component={CompletedList} />
+            </Switch>
+        </GlobalProvider>
+    );
 }
 
 export default App;
