@@ -33,6 +33,7 @@ export default function MovieSearch() {
 						<span className="visually-hidden">Loading...</span>
 					</div>
 				)}
+				{data && data.total_results === 0 ? <p>No matching results. Search again?</p> : "" }
 				{data &&
 					data.results.map((movie) => {
 						return (
